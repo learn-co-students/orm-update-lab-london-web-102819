@@ -50,7 +50,7 @@ class Student
   end
 
   def self.create(name, grade)
-    student = Student.new(name, grade)
+    student = self.new(name, grade)
     student.save
     student
   end
@@ -59,7 +59,7 @@ class Student
     id = array[0]
     name = array[1]
     grade = array[2]
-    Student.new(id, name, grade)
+    self.new(id, name, grade)
   end
 
   def self.find_by_name(name)
